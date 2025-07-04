@@ -1,22 +1,22 @@
 # Calculator App - Learning Project
 
-![Calculator Screenshot](screenshot.png)
+![Calculator Screenshot](/assets/images/screenshot.png)
 
-A simple calculator application built as a learning project to understand fundamental programming concepts and user interface developement.
+A simple calculator application built as a learning project to understand fundamental programming concepts and user interface development.
 
 ## Learning Objectives
 
 This project helps you learn and practice:
 
 - **Programming Fundamentals**
-  - Variable decleration and manipulation
+  - Variable declaration and manipulation
   - Function creation and implementation
   - Event handling and user instructions
   - Conditional logic and error handling
  
 - **Problem-Solving Skills**
   - Breaking down complex problems intro smaller parts
-  - Implementing mathmematical operations in code
+  - Implementing mathematical operations in code
   - Debugging and testing functionality
 
 ## Features
