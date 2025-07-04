@@ -1,5 +1,7 @@
 # Calculator App - Learning Project
 
+![Calculator Screenshot](screenshot.png)
+
 A simple calculator application built as a learning project to understand fundamental programming concepts and user interface developement.
 
 ## Learning Objectives
