@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+:root {
+  --calculator-body: #242038;
+  --display-background: #F7ECE1;
+  --number-button: #F7ECE1;
+  --operator-button: #725AC1;
+  --function-button: #8D86C9;
+
+  --number-button-hover: #E8D5C4;
+  --operator-button-hover: #8D72D9;
+  --function-button-hover: #A399D4;
+
+  --number-button-active: #D4C2A5; /* Darker when pressed */
+  --operator-button-active: #5A4A9A; /* Darker when pressed */
+  --function-button-active: #7A72B8; /* Darker when pressed */
+
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calculator {
+  background-color: var(--calculator-body);
+  width: fit-content;
+  padding: 2rem;
+  border-radius: 20px;
+}
+
+.screen {
+  display: inline-flex;
+  width: 350px;
+  height: 70px;
+  border-radius: 15px;
+  border: none;
+  text-align: right;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+.button {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  border: none;
+}
+
+.buttons-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+.function-btn,
+.operator-btn,
+.number-btn {
+  transition: all 0.2s ease;
+}
+
+.function-btn {
+  background-color: var(--function-button);
+}
+
+.operator-btn {
+  background-color: var(--operator-button);
+}
+
+.number-btn {
+  background-color: var(--number-button);
+}
+
+.function-btn:hover {
+  background-color: var(--function-button-hover);
+}
+
+.operator-btn:hover {
+  background-color: var(--operator-button-hover);
+}
+
+.number-btn:hover {
+  background-color: var(--number-button-hover);
+}
+
+.function-btn:active {
+  background-color: var(--function-button-active);
+}
+
+.operator-btn:active {
+  background-color: var(--operator-button-active);
+}
+
+.number-btn:active {
+  background-color: var(--number-button-active);
+}
+
+.function-btn:hover,
+.operator-btn:hover,
+.number-btn:hover {
+  cursor: pointer;
+}
+
+
+
