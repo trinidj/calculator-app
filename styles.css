@@ -14,7 +14,6 @@
   --number-button-active: #D4C2A5; /* Darker when pressed */
   --operator-button-active: #5A4A9A; /* Darker when pressed */
   --function-button-active: #7A72B8; /* Darker when pressed */
-
 }
 
 *,
@@ -27,6 +26,7 @@
   margin: 0;
   padding: 0;
   line-height: 1.5;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 body {
@@ -54,12 +54,21 @@ body {
   font-size: 1.5rem;
 }
 
+.screen:focus {
+  outline: none;
+}
+
 .button {
   width: 100%;
   aspect-ratio: 1 / 1;
   font-size: 1.5rem;
   border-radius: 5px;
   border: none;
+  transition: all 0.1s ease;
+}
+
+.button:active {
+  transform: scale(0.90);
 }
 
 .buttons-grid {
