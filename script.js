@@ -26,13 +26,13 @@ clearButton.addEventListener('click', () => {
 
 decimalButton.addEventListener('click', () => {
   calc.handleDecimalClick();
-})
+});
 
 addButton.addEventListener('click', () => {
   calc.operator = '+';
   calc.previousValue = calc.currentValue;
   calc.currentValue = '';
-})
+});
 
 subtractButton.addEventListener('click', () => {
   calc.operator = '-';
