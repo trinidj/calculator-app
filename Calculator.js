@@ -2,7 +2,6 @@ export class Calculator {
   constructor() {
     this.currentValue = '';
     this.previousValue = null;
-    this.display = document.getElementById('display');
     this.operator = null;
   }
 
@@ -33,7 +32,7 @@ export class Calculator {
   }
 
   updateDisplay = () => {
-    this.display.value = this.currentValue;
+    document.getElementById('display').value = this.currentValue;
   }
 
   clearScreen = () => {

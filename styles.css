@@ -64,11 +64,11 @@ body {
   font-size: 1.5rem;
   border-radius: 5px;
   border: none;
-  transition: all 0.1s ease;
+  transition: all 0.005s ease;
 }
 
 .button:active {
-  transform: scale(0.90);
+  transform: scale(0.95);
 }
 
 .buttons-grid {
