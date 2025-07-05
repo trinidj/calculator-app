@@ -1,18 +1,30 @@
 import { Calculator } from './Calculator.js';
 
 const calc = new Calculator();
-const numberButtons = document.getElementsByClassName('number-btn');
-const clearButton = document.getElementById('clear-btn');
-const decimalButton = document.getElementById('decimal-btn');
 
-const addButton = document.getElementById('add-btn');
-const subtractButton = document.getElementById('subtract-btn');
-const multiplyButton = document.getElementById('multiply-btn');
-const divideButton = document.getElementById('divide-btn');
-const equalsButton = document.getElementById('equals-btn');
+// Creating a "lookup" table for DOM element selectors
+const elements = {
+  numbers: document.getElementById('number-btn'),
+  clear: document.getElementById('clear-btn'),
+  decimal: document.getElementById('decimal-btn'),
+  negate: document.getElementById('negate-btn'),
+  percent: document.getElementById('percent-btn'),
+  equals: document.getElementById('equals-btn'),
 
-const negateButton = document.getElementById('negate-btn');
-const percentButton = document.getElementById('percent-btn');
+  operators: {
+    add: document.getElementById('add-btn'),
+    subtract: document.getElementById('subtract-btn'),
+    multiply: document.getElementById('multiply-btn'),
+    divide: document.getElementById('divide-btn'),
+  },
+};
+
+const operatorMap = {
+  add: '+',
+  subtract: '-',
+  multiply: 'x',
+  divide: '÷',
+};
 
 Array.from(numberButtons).forEach(button => {
   button.addEventListener('click', (e) => {
