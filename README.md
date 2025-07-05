@@ -31,5 +31,6 @@ This project helps you learn and practice:
 - Number input button (0-9)
 - Operations buttons
 - Clear/Reset functionality
+- Percentage / Negate functionality
 - Display screen for numbers and results
 - Equal button for calculations
