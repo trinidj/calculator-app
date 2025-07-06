@@ -14,6 +14,12 @@ export class Calculator {
     this.updateDisplay();
   }
 
+  handleOperatorClick(operator) {
+    this.operator = operator;
+    this.previousValue = this.currentValue;
+    this.currentValue = '';
+  }
+
   handleDecimalClick = () => {
     if (!this.currentValue.includes('.')) {
       this.currentValue = this.currentValue === '' ? '0.' : this.currentValue + '.';
