@@ -37,6 +37,11 @@ export class Calculator {
     this.updateDisplay();
   }
 
+  handleRadicalClick = () => {
+    this.currentValue = Math.sqrt(parseFloat(this.currentValue));
+    this.updateDisplay();
+  }
+
   updateDisplay = () => {
     document.getElementById('display').value = this.currentValue;
   }

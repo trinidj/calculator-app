@@ -16,6 +16,7 @@ const elements = {
   negate: document.getElementById('negate-btn'),
   percent: document.getElementById('percent-btn'),
   equals: document.getElementById('equals-btn'),
+  radical: document.getElementById('radical-btn'),
 
   operators: {
     add: document.getElementById('add-btn'),
@@ -49,5 +50,6 @@ elements.clear.addEventListener('click', () => calc.clearScreen());
 elements.decimal.addEventListener('click', () => calc.handleDecimalClick());
 elements.negate.addEventListener('click', () => calc.handleNegateClick());
 elements.percent.addEventListener('click', () => calc.handlePercentageClick());
+elements.radical.addEventListener('click', () => calc.handleRadicalClick());
 
 elements.equals.addEventListener('click', () => calc.calculate(calc.previousValue, calc.operator, calc.currentValue));
