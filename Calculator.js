@@ -3,6 +3,7 @@ export class Calculator {
     this.currentValue = '';
     this.previousValue = null;
     this.operator = null;
+    this.memoryValue = null;
   }
 
   updateDisplay = () => {
@@ -44,6 +45,33 @@ export class Calculator {
   handleRadicalClick = () => {
     this.currentValue = Math.sqrt(parseFloat(this.currentValue));
     this.updateDisplay();
+  }
+
+  handleMemoryStoreClick = () => {
+    this.memoryValue = this.currentValue;
+  }
+
+  handleMemoryRecallClick = () => {
+    this.currentValue = this.memoryValue;
+    this.updateDisplay();
+  }
+
+  handleMemoryClearClick = () => {
+    this.memoryValue = null;
+  }
+
+  handleMemoryAddClick = () => {
+    const a = parseFloat(this.memoryValue);
+    const b = parseFloat(this.currentValue);
+
+    this.memoryValue = a + b;
+  }
+
+  handleMemorySubtractClick = () => {
+    const a = parseFloat(this.memoryValue);
+    const b = parseFloat(this.currentValue);
+
+    this.memoryValue = a - b;
   }
 
   clearScreen = () => {
