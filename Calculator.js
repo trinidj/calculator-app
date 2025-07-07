@@ -5,6 +5,10 @@ export class Calculator {
     this.operator = null;
   }
 
+  updateDisplay = () => {
+    document.getElementById('display').value = this.currentValue;
+  }
+
   handleNumberClick = value => {
     if (this.currentValue === '0') {
       this.currentValue = value;
@@ -40,10 +44,6 @@ export class Calculator {
   handleRadicalClick = () => {
     this.currentValue = Math.sqrt(parseFloat(this.currentValue));
     this.updateDisplay();
-  }
-
-  updateDisplay = () => {
-    document.getElementById('display').value = this.currentValue;
   }
 
   clearScreen = () => {
