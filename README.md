@@ -9,6 +9,7 @@ A simple calculator application built as a learning project to understand fundam
 - Clear, reset and memory functionality
 - Real-time calculation display
 - Clean, user-friendly design
+- Decimal and percentage support
 
 ## 🎯 Learning Goals
 
@@ -16,9 +17,9 @@ This project helped me develop skills in:
 
 - Mathematical logic and operations
 - User interface design and layout
-- Event handling and input validation
+- DOM manipulation and event handling
 - Function organization and code structure
-- problem solving and debugging
+- Problem solving and debugging
 
 ## 🛠️ Built With
 - HTML/CSS/JavaScript
