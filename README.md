@@ -1,4 +1,4 @@
-# Calculator App - Learning Project
+# 🧮 Calculator App - Learning Project
 
 ![Calculator Screenshot](/assets/images/screenshot.png)
 
