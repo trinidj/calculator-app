@@ -1,36 +1,26 @@
-# Calculator App - Learning Project
+# 🧮 Calculator App - Learning Project
 
 ![Calculator Screenshot](/assets/images/screenshot.png)
 
 A simple calculator application built as a learning project to understand fundamental programming concepts and user interface development.
 
-## Learning Objectives
+## ✨ Features
+- Basic arithemtic operations (addtion, subtraction, multiplication, division)
+- Clear, reset and memory functionality
+- Real-time calculation display
+- Clean, user-friendly design
+- Decimal and percentage support
 
-This project helps you learn and practice:
+## 🎯 Learning Goals
 
-- **Programming Fundamentals**
-  - Variable declaration and manipulation
-  - Function creation and implementation
-  - Event handling and user instructions
-  - Conditional logic and error handling
- 
-- **Problem-Solving Skills**
-  - Breaking down complex problems intro smaller parts
-  - Implementing mathematical operations in code
-  - Debugging and testing functionality
+This project helped me develop skills in:
 
-## Features
+- Mathematical logic and operations
+- User interface design and layout
+- DOM manipulation and event handling
+- Function organization and code structure
+- Problem solving and debugging
 
-### Basic Operations
-- Addition (+)
-- Subtraction (-)
-- Multiplication (*)
-- Division (÷)
-
-### User Interface
-- Number input button (0-9)
-- Operations buttons
-- Clear/Reset functionality
-- Percentage / Negate functionality
-- Display screen for numbers and results
-- Equal button for calculations
+## 🛠️ Built With
+- HTML/CSS/JavaScript
+- Clean, semantic code structure
