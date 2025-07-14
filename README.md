@@ -5,7 +5,7 @@
 A simple calculator application built as a learning project to understand fundamental programming concepts and user interface development.
 
 ## ✨ Features
-- Basic arithemtic operations (addtion, subtraction, multiplication, division)
+- Basic arithmetic operations (addition, subtraction, multiplication, division)
 - Clear, reset and memory functionality
 - Real-time calculation display
 - Clean, user-friendly design
