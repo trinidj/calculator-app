@@ -3,9 +3,7 @@ import { Calculator } from './Calculator.js';
 const calc = new Calculator();
 
 /**
- * 
  * Lookup table for elements and hashmap for operators for organization, and makes it more maintainable
- * 
  */
 
 // Creating a "lookup" table for DOM element selectors
