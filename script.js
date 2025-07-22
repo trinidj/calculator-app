@@ -67,7 +67,7 @@ elements.negate.addEventListener('click', () => calc.handleNegateClick());
 elements.percent.addEventListener('click', () => calc.handlePercentageClick());
 elements.radical.addEventListener('click', () => calc.handleRadicalClick());
 
-elements.equals.addEventListener('click', () => calc.calculate(calc.previousValue, calc.operator, calc.currentValue));
+elements.equals.addEventListener('click', () => calc.calculate(calc.previousValue, calc.currentValue, calc.operator));
 
 /**
  * Memory Event Listeners
