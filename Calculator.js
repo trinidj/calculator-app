@@ -20,6 +20,10 @@ export class Calculator {
   }
 
   handleOperatorClick(operator) {
+    if (this.operator && this.previousValue && this.currentValue) {
+      this.calculate(this.previousValue, this.currentValue, this.operator);
+    }
+
     this.operator = operator;
     this.previousValue = this.currentValue;
     this.currentValue = '';
