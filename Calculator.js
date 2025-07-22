@@ -10,7 +10,7 @@ export class Calculator {
     document.getElementById('display').value = this.currentValue;
   }
 
-  handleNumberClick() {
+  handleNumberClick(value) {
     if (this.currentValue === '0') {
       this.currentValue = value;
     } else {
@@ -32,9 +32,18 @@ export class Calculator {
     }
   }
 
+  /**
+   * Type Safety -> Explicit conversion with validation
+   */
   handleNegateClick() {
-    this.currentValue *= -1;
-    this.updateDisplay();
+    if (this.currentValue && this.currentValue !== '0') {
+      const num = parseFloat(this.currentValue);
+
+      if (!isNaN(num)) {
+        this.currentValue = (-num).toString();
+        this.updateDisplay(); 
+      }
+    }
   }
 
   handlePercentageClick() {
@@ -106,6 +115,8 @@ export class Calculator {
         result = 'Error';
     }
     this.currentValue = result.toString();
+    this.operator = null;
+    this.previousValue = null;
     this.updateDisplay();
   }
 }
