@@ -6,11 +6,11 @@ export class Calculator {
     this.memoryValue = null;
   }
 
-  updateDisplay = () => {
+  updateDisplay() {
     document.getElementById('display').value = this.currentValue;
   }
 
-  handleNumberClick = value => {
+  handleNumberClick() {
     if (this.currentValue === '0') {
       this.currentValue = value;
     } else {
@@ -25,62 +25,62 @@ export class Calculator {
     this.currentValue = '';
   }
 
-  handleDecimalClick = () => {
+  handleDecimalClick() {
     if (!this.currentValue.includes('.')) {
       this.currentValue = this.currentValue === '' ? '0.' : this.currentValue + '.';
       this.updateDisplay();
     }
   }
 
-  handleNegateClick = () => {
+  handleNegateClick() {
     this.currentValue *= -1;
     this.updateDisplay();
   }
 
-  handlePercentageClick = () => {
+  handlePercentageClick() {
     this.currentValue /= 100;
     this.updateDisplay();
   }
 
-  handleRadicalClick = () => {
+  handleRadicalClick() {
     this.currentValue = Math.sqrt(parseFloat(this.currentValue));
     this.updateDisplay();
   }
 
-  handleMemoryStoreClick = () => {
+  handleMemoryStoreClick() {
     this.memoryValue = this.currentValue;
   }
 
-  handleMemoryRecallClick = () => {
+  handleMemoryRecallClick() {
     this.currentValue = this.memoryValue;
     this.updateDisplay();
   }
 
-  handleMemoryClearClick = () => {
+  handleMemoryClearClick() {
     this.memoryValue = null;
   }
 
-  handleMemoryAddClick = () => {
+  handleMemoryAddClick() {
     const a = parseFloat(this.memoryValue);
     const b = parseFloat(this.currentValue);
 
     this.memoryValue = a + b;
   }
 
-  handleMemorySubtractClick = () => {
+  handleMemorySubtractClick() {
     const a = parseFloat(this.memoryValue);
     const b = parseFloat(this.currentValue);
 
     this.memoryValue = a - b;
   }
 
-  clearScreen = () => {
+  clearScreen() {
     this.currentValue = '';
     this.previousValue = null;
     this.updateDisplay();
   }
 
-  calculate = (num1, op, num2) => {
+  calculate(num1, num2, op) {
     let result;
     const a = parseFloat(num1);
     const b = parseFloat(num2);
