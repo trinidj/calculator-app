@@ -62,8 +62,14 @@ export class Calculator {
   }
 
   handleRadicalClick() {
-    this.currentValue = Math.sqrt(parseFloat(this.currentValue));
-    this.updateDisplay();
+    if (this.currentValue) {
+      const num = parseFloat(this.currentValue);
+
+      if (!isNaN(num) && num >= 0) {
+        this.currentValue = Math.sqrt(num).toString();
+        this.updateDisplay();
+      }
+    }
   }
 
   
