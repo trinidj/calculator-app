@@ -11,10 +11,12 @@ export class Calculator {
   }
 
   handleNumberClick(value) {
+    const num = parseFloat(value);
+
     if (this.currentValue === '0') {
-      this.currentValue = value;
+      this.currentValue = num.toString();
     } else {
-      this.currentValue += value;
+      this.currentValue += num.toString();
     }
     this.updateDisplay();
   }
@@ -78,8 +80,10 @@ export class Calculator {
   }
 
   handleMemoryRecallClick() {
-    this.currentValue = this.memoryValue;
-    this.updateDisplay();
+    if (this.memoryValue !== null) {
+      this.currentValue = this.memoryValue;
+      this.updateDisplay();
+    }
   }
 
   handleMemoryClearClick() {
@@ -101,15 +105,23 @@ export class Calculator {
   }
 
   handleMemorySubtractClick() {
-    const a = parseFloat(this.memoryValue);
-    const b = parseFloat(this.currentValue);
+    if (!this.currentValue) {
+      return;
+    }
 
-    this.memoryValue = a - b;
+    const currentNum = parseFloat(this.currentValue);
+    const memoryNum = parseFloat(this.memoryValue) || 0;
+
+    if (isNaN(currentNum)) {
+      return;
+    }
+    this.memoryValue = (memoryNum - currentNum).toString();
   }
 
   clearScreen() {
     this.currentValue = '';
     this.previousValue = null;
+    this.operator = null;
     this.updateDisplay();
   }
 
