@@ -87,10 +87,17 @@ export class Calculator {
   }
 
   handleMemoryAddClick() {
-    const a = parseFloat(this.memoryValue);
-    const b = parseFloat(this.currentValue);
+    if (!this.currentValue) {
+      return;
+    }
 
-    this.memoryValue = a + b;
+    const currentNum = parseFloat(this.currentValue);
+    if (isNaN(currentNum)) {
+      return;
+    }
+
+    const memoryNum = parseFloat(this.memoryValue) || 0;
+    this.memoryValue = (memoryNum + currentNum).toString();
   }
 
   handleMemorySubtractClick() {
