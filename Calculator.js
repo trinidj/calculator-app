@@ -51,8 +51,14 @@ export class Calculator {
   }
 
   handlePercentageClick() {
-    this.currentValue /= 100;
-    this.updateDisplay();
+    if (this.currentValue) {
+      const num = parseFloat(this.currentValue);
+
+      if (!isNaN(num)) {
+        this.currentValue = (num / 100).toString();
+        this.updateDisplay();
+      } 
+    }
   }
 
   handleRadicalClick() {
@@ -60,6 +66,7 @@ export class Calculator {
     this.updateDisplay();
   }
 
+  
   handleMemoryStoreClick() {
     this.memoryValue = this.currentValue;
   }
